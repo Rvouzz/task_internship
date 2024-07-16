@@ -1,0 +1,40 @@
+@model SalesRecordManagementSystem.Models.Sales
+
+<div class="container mt-3">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th class="font-weight-bold">@Html.LabelFor(model => model.SalesOrder)</th>
+                <td>@Html.DisplayFor(model => model.SalesOrder)</td>
+            </tr>
+            <tr>
+                <th class="font-weight-bold">@Html.LabelFor(model => model.SalesOrderItem)</th>
+                <td>@Html.DisplayFor(model => model.SalesOrderItem)</td>
+            </tr>
+            <tr>
+                <th class="font-weight-bold">@Html.LabelFor(model => model.WorkOrder)</th>
+                <td>@Html.DisplayFor(model => model.WorkOrder)</th>
+            </tr>
+            <tr>
+                <th class="font-weight-bold">@Html.LabelFor(model => model.ProductId)</th>
+                <td>@Html.DisplayFor(model => model.ProductId)</td>
+            </tr>
+            <tr>
+                <th class="font-weight-bold">@Html.LabelFor(model => model.ProductDesc)</th>
+                <td>@Html.DisplayFor(model => model.ProductDesc)</td>
+            </tr>
+            <tr>
+                <th class="font-weight-bold">@Html.LabelFor(model => model.OrderQuantity)</th>
+                <td>@Html.DisplayFor(model => model.OrderQuantity)</td>
+            </tr>
+            <tr>
+                <th class="font-weight-bold">@Html.LabelFor(model => model.OrderStatus)</th>
+                <td>@Html.DisplayFor(model => model.OrderStatus)</td>
+            </tr>
+            <tr>
+                <th class="font-weight-bold">@Html.LabelFor(model => model.Timestamp)</th>
+                <td>@Html.DisplayFor(model => model.Timestamp)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

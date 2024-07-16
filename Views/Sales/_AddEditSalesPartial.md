@@ -1,0 +1,47 @@
+@model SalesRecordManagementSystem.Models.Sales
+
+<form id="addEditSalesForm" method="post" asp-action="Save">
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id)
+    <div class="form-group">
+        @Html.LabelFor(model => model.SalesOrder)
+        @Html.TextBoxFor(model => model.SalesOrder, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SalesOrder, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.SalesOrderItem)
+        @Html.TextBoxFor(model => model.SalesOrderItem, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SalesOrderItem, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.WorkOrder)
+        @Html.TextBoxFor(model => model.WorkOrder, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.WorkOrder, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProductId)
+        @Html.TextBoxFor(model => model.ProductId, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProductDesc)
+        @Html.TextBoxFor(model => model.ProductDesc, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ProductDesc, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.OrderQuantity)
+        @Html.TextBoxFor(model => model.OrderQuantity, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.OrderQuantity, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.OrderStatus)
+        @Html.TextBoxFor(model => model.OrderStatus, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.OrderStatus, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Timestamp)
+        @Html.TextBoxFor(model => model.Timestamp, new { @class = "form-control", type = "datetime-local" })
+        @Html.ValidationMessageFor(model => model.Timestamp, "", new { @class = "text-danger" })
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
